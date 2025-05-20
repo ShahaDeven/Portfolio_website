@@ -27,22 +27,23 @@ st.markdown("""
 # ---- ABOUT ME ----
 st.header("👨‍💻 About Me")
 
-col1, col2 = st.columns([1, 2])
+col1, col2,col3 = st.columns([1, 2, 3])
 
 with col1:
     st.image("https://raw.githubusercontent.com/ShahaDeven/Portfolio_website/main/assets/profile.jpeg", width=200)  
 with col2:
     st_lottie(animation, height=180)
+with col3:
+    st.markdown("""
+        **🎓 Deven Shah**  
+        Master's Student in Data Science @ University at Buffalo  
+        📫 deven.rshaha@gmail.com  
+        🌐 [LinkedIn](https://linkedin.com/in/deven-shaha) | [GitHub](https://github.com/ShahaDeven)
 
-st.markdown("""
-**🎓 Deven Shah**  
-Master's Student in Data Science @ University at Buffalo  
-📫 deven.rshaha@gmail.com  
-🌐 [LinkedIn](https://linkedin.com/in/deven-shaha) | [GitHub](https://github.com/ShahaDeven)
+        I'm a data science enthusiast passionate about machine learning, analytics, and storytelling through data.  
+        I enjoy combining technical solutions with creativity, and I've worked on projects in computer vision, NLP, and data visualization.
+        """)
 
-I'm a data science enthusiast passionate about machine learning, analytics, and storytelling through data.  
-I enjoy combining technical solutions with creativity, and I've worked on projects in computer vision, NLP, and data visualization.
-""")
 
 
 
