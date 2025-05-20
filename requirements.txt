@@ -1,4 +1,3 @@
 streamlit
-json
 requests
 streamlit_lottie
