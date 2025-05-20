@@ -90,7 +90,19 @@ with st.expander("✈️ Aircraft Reviews Dashboard"):
 
 # ---- RESUME ----
 st.header("📄 Resume")
-st.markdown("[Download Resume (PDF)](https://raw.githubusercontent.com/ShahaDeven/Portfolio_website/main/Deven_Rahul_Shah_Resume.pdf)")
+resume_url = "https://raw.githubusercontent.com/ShahaDeven/Portfolio_website/main/Deven_Rahul_Shah_Resume.pdf"
+view_url = "https://github.com/ShahaDeven/Portfolio_website/blob/main/Deven_Rahul_Shah_Resume.pdf"
+
+import requests
+resume_file = requests.get(resume_url).content
+st.download_button(
+    label="⬇️ Download Resume (PDF)",
+    data=resume_file,
+    file_name="Deven_Rahul_Shah_Resume.pdf",
+    mime="application/pdf"
+)
+
+st.markdown(f"[🔗 Open Resume in New Tab]({view_url})")
 
 # ---- PUBLICATIONS ----
 st.header("📚 Publications")
