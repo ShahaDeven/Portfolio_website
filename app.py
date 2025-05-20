@@ -15,7 +15,7 @@ st.markdown("""
 # ---- ABOUT ME ----
 col1, col2 = st.columns([1, 4])
 with col1:
-    st.image("assets/profile.jpeg", width=120)  # Add profile pic if available
+    st.image("https://raw.githubusercontent.com/ShahaDeven/Portfolio_website/main/assets/profile.jpeg", width=200)  
 with col2:
     st.markdown("""
     **🎓 Deven Shah**  
