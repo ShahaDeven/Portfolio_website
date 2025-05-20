@@ -50,6 +50,15 @@ with col3:
 # ---- MACHINE LEARNING PROJECTS ----
 st.header("🧠 Machine Learning Projects")
 
+with st.expander("🎓 Graduate Admission Prediction"):
+    st.markdown("""
+    - **Tools:** Python, Scikit-learn, Pandas, Jupyter Notebook  
+    - Led an independent research project under Dr. David Doermann to predict graduate admissions using historical applicant data.  
+    - Engineered features and ranked attributes using AHP (Analytic Hierarchy Process).  
+    - Trained Random Forest, Neural Network, and Gradient Boosting models, achieving 74% accuracy with k-fold cross-validation.  
+    - Visualized model performance and feature importance for interpretability.  
+    """)
+
 with st.expander("🐜 Fleet Management Optimization with Ant Colony"):
     st.markdown("""
     - **Tools:** Python, Jupyter Notebook  
@@ -134,7 +143,7 @@ with st.expander("🚗 Fleet Management Optimization with Ant Colony - IEEE Xplo
     - 📄 [View on IEEE Xplore](https://ieeexplore.ieee.org/document/10988157)
     """)
 
-with st.expander("🕊️ Comparative Analysis of Object Identification Techniques for Bird Species"):
+with st.expander("🕊️ Comparative Analysis of Object Identification Techniques for Bird Species - IEEE Xplore"):
     st.markdown("""
     - Conducted a performance comparison of YOLOv5 and YOLOv8 for bird species detection using custom video-based datasets.  
     - Demonstrated YOLOv8's superior accuracy on larger, multi-class datasets from tropical regions and sanctuaries.  
