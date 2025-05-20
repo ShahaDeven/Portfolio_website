@@ -1,8 +1,20 @@
 import streamlit as st #type: ignore
 import streamlit.components.v1 as components #type: ignore
+from streamlit_lottie import st_lottie #type: ignore
+import requests
+import json
 
 # ---- PAGE CONFIG ----
 st.set_page_config(page_title="Deven's Data Science Portfolio", layout="wide")
+
+def load_lottie_url(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+animation = load_lottie_url("https://raw.githubusercontent.com/ShahaDeven/Portfolio_website/main/assets/Animation.json")
+
 
 # ---- HEADER ----
 st.title("👋 Hi, I'm Deven Shah")
@@ -13,17 +25,25 @@ st.markdown("""
 """)
 
 # ---- ABOUT ME ----
-col1, col2 = st.columns([1, 4])
+st.header("👨‍💻 About Me")
+
+col1, col2 = st.columns([1, 2])
+
 with col1:
     st.image("https://raw.githubusercontent.com/ShahaDeven/Portfolio_website/main/assets/profile.jpeg", width=200)  
 with col2:
-    st.markdown("""
-    **🎓 Deven Shah**  
-    Master's Student in Data Science @ University at Buffalo  
-    📫 deven.rshaha@gmail.com  
-    🌐 [LinkedIn](https://linkedin.com/in/deven-shaha) | [GitHub](https://github.com/ShahaDeven)
-    """)
-    st.write("I'm a data science enthusiast passionate about ML, analytics, and visualization...")
+    st_lottie(animation, height=180)
+
+st.markdown("""
+**🎓 Deven Shah**  
+Master's Student in Data Science @ University at Buffalo  
+📫 deven.rshaha@gmail.com  
+🌐 [LinkedIn](https://linkedin.com/in/deven-shaha) | [GitHub](https://github.com/ShahaDeven)
+
+I'm a data science enthusiast passionate about machine learning, analytics, and storytelling through data.  
+I enjoy combining technical solutions with creativity, and I've worked on projects in computer vision, NLP, and data visualization.
+""")
+
 
 
 # ---- MACHINE LEARNING PROJECTS ----
@@ -107,11 +127,20 @@ st.markdown(f"[🔗 Open Resume in New Tab]({view_url})")
 # ---- PUBLICATIONS ----
 st.header("📚 Publications")
 
-with st.expander("Fleet Management Optimization with Ant Colony - IEEE Xplore"):
+with st.expander("🚗 Fleet Management Optimization with Ant Colony - IEEE Xplore"):
     st.markdown("""
     - Published research on vehicle routing using Ant Colony Optimization.  
     - 📄 [View on IEEE Xplore](https://ieeexplore.ieee.org/document/10988157)
     """)
+
+with st.expander("🕊️ Comparative Analysis of Object Identification Techniques for Bird Species"):
+    st.markdown("""
+    - Conducted a performance comparison of YOLOv5 and YOLOv8 for bird species detection using custom video-based datasets.  
+    - Demonstrated YOLOv8's superior accuracy on larger, multi-class datasets from tropical regions and sanctuaries.  
+    - Aimed to improve identification accuracy for ornithological research and conservation efforts.  
+    - 📄 [View on IEEE Xplore](https://ieeexplore.ieee.org/document/10837870)
+    """)
+
 
 with st.expander("👤 Fake Account Detection - IEEE Xplore"):
     st.markdown("""
