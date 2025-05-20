@@ -84,7 +84,7 @@ with st.expander("✈️ Aircraft Reviews Dashboard"):
 
 # ---- RESUME ----
 st.header("📄 Resume")
-st.markdown("[Download Resume (PDF)](https://yourhost.com/Deven_Rahul_Shah_Resume.pdf)")
+st.markdown("[Download Resume (PDF)](https://raw.githubusercontent.com/ShahaDeven/Portfolio_website/main/Deven_Rahul_Shah_Resume.pdf)")
 
 # ---- PUBLICATIONS ----
 st.header("📚 Publications")
