@@ -13,12 +13,18 @@ st.markdown("""
 """)
 
 # ---- ABOUT ME ----
-st.header("About Me")
-# st.image("assets\profile.jpeg", width=150)
-st.markdown("""
-I am a data science enthusiast with experience in Python, ML, and visualization tools like Tableau.  
-I've worked on hackathons, research papers, and projects involving autonomous driving, Uber trip analysis, and mood classification.
-""")
+col1, col2 = st.columns([1, 4])
+with col1:
+    st.image("assets/profile.jpeg", width=120)  # Add profile pic if available
+with col2:
+    st.markdown("""
+    **🎓 Deven Shah**  
+    Master's Student in Data Science @ University at Buffalo  
+    📫 deven.rshaha@gmail.com  
+    🌐 [LinkedIn](https://linkedin.com/in/deven-shaha) | [GitHub](https://github.com/ShahaDeven)
+    """)
+    st.write("I'm a data science enthusiast passionate about ML, analytics, and visualization...")
+
 
 # ---- MACHINE LEARNING PROJECTS ----
 st.header("🧠 Machine Learning Projects")
