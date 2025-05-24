@@ -59,6 +59,15 @@ with st.expander("🎓 Graduate Admission Prediction"):
     - Visualized model performance and feature importance for interpretability.  
     """)
 
+with st.expander("📈 Time Series Sales Forecasting with LSTM"):
+    st.markdown("""
+    - Developed a deep learning pipeline to forecast retail sales using Bidirectional LSTM and stacked LSTM layers with Huber loss and dropout regularization.
+    - Engineered rich temporal features (e.g., day-of-week, weekend, week-of-year) and implemented sequence generation for time-based forecasting windows.
+    - Created autoregressive prediction loops for 1-day, 7-day, and 30-day rolling forecasts with smoothed and downsampled visualizations.
+    - Tuned hyperparameters (e.g., LSTM units, learning rate, dropout, batch size) using Optuna to reduce MAE and RMSE, and improve R².
+    - Evaluated model with R² Score: 0.8191, RMSE: 1415.43 and MAE: 945.18.
+    """)
+
 with st.expander("🐜 Fleet Management Optimization with Ant Colony"):
     st.markdown("""
     - **Tools:** Python, Jupyter Notebook  
