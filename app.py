@@ -18,6 +18,7 @@ animation = load_lottie_url("https://raw.githubusercontent.com/ShahaDeven/Portfo
 
 # ---- HEADER ----
 st.title("👋 Hi, I'm Deven Shah")
+st.info("⏳ The app may take a few seconds to load — thanks for your patience!")
 st.markdown("""
 🎓 Master's Student in Data Science @ University at Buffalo  
 📊 Passionate about Machine Learning, Data Visualization, and Predictive Modeling  
@@ -115,17 +116,25 @@ st.header("📊 Tableau Dashboards")
 with st.expander("✈️ Aircraft Reviews Dashboard"):
     st.markdown("""
     - Analyzed airline passenger reviews across key categories: Cabin Staff, Entertainment, Food, Ground Service, Seat Comfort, and Value for Money.  
-    - Included filter options for Passenger Type (e.g., solo, couple, business) and Seat Type (e.g., Economy, Business, First Class).  
-    - Created an interactive dashboard to identify satisfaction trends and performance insights across airlines and travel classes.  
-    - [View on Tableau Public](https://public.tableau.com/views/Aircraft_Reviews/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+    - Included filter options for Passenger Type and Seat Type.  
+    - Created an interactive dashboard to identify satisfaction trends and airline performance insights.  
+    - [🔗 View on Tableau Public](https://public.tableau.com/views/Aircraft_Reviews/Dashboard1)
     """)
     components.html(
-        """
-        <iframe src="https://public.tableau.com/views/Aircraft_Reviews/Dashboard1?:embed=y&:display_count=yes"
-        width="1000" height="650" frameborder="0" allowfullscreen></iframe>
-        """,
-        height=650,
-    )
+    """
+    <div style="display: flex; justify-content: center;">
+        <iframe 
+            src="https://public.tableau.com/views/Aircraft_Reviews/Dashboard1?:embed=y&:display_count=yes&:showVizHome=no" 
+            width="1250" 
+            height="740" 
+            style="border:none;" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    """,
+    height=760  
+)
 
 # ---- RESUME ----
 st.header("📄 Resume")
