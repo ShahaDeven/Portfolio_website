@@ -136,6 +136,31 @@ with st.expander("✈️ Aircraft Reviews Dashboard"):
     height=760  
 )
 
+with st.expander("🛒 Ecommerce Sales Dashboard"):
+    st.markdown("""
+        - Visualized top 10 customers by predicted CLV to identify key revenue contributors.  
+        - Included dynamic filters for Country and Segment (e.g., Champion, At Risk, Big Spender) to explore regional patterns.  
+        - Compared CLV distribution, average revenue, and customer segments using histograms and bar charts.  
+        - Interactive dashboard supports insights on customer targeting and regional marketing strategy.  
+        - [🔗 View on Tableau Public](https://public.tableau.com/app/profile/deven.shah/viz/Ecommerce_sales_17482171615060/CustomerLifetimeValueDashboard#1)
+    """)
+    components.html(
+    """
+    <div style="display: flex; justify-content: center;">
+        <iframe 
+            src="https://public.tableau.com/views/Ecommerce_sales_17482171615060/CustomerLifetimeValueDashboard?:embed=y&:display_count=yes&:showVizHome=no" 
+            width="1300" 
+            height="800" 
+            style="border:none;" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    """,
+    height=840,
+)
+
+
 # ---- RESUME ----
 st.header("📄 Resume")
 resume_url = "https://raw.githubusercontent.com/ShahaDeven/Portfolio_website/main/Deven_Rahul_Shah_Resume.pdf"
