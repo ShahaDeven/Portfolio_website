@@ -18,11 +18,31 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Puppeteer
+      - name: Install Puppeteer & Chromium dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libxss1 \
+            libappindicator1 \
+            libindicator7 \
+            libasound2 \
+            libnss3 \
+            libx11-xcb1 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxrandr2 \
+            xdg-utils \
+            fonts-liberation \
+            libgbm1 \
+            libgtk-3-0 \
+            libpango-1.0-0 \
+            libcairo2 \
+            libatspi2.0-0 \
+            libdrm2 \
+            libxkbcommon0 \
+            libxshmfence1
           npm init -y
           npm install puppeteer
 
-      - name: Launch Headless Browser to Ping Streamlit
-        run: |
-          node wakeup.js
+      - name: Run Puppeteer Script
+        run: node wakeup.js
