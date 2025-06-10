@@ -1,10 +1,12 @@
-const puppeteer = require("puppeteer");
+const chromium = require("chrome-aws-lambda");
+const puppeteer = require("puppeteer-core");
 
 (async () => {
   try {
     const browser = await puppeteer.launch({
-      headless: true,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      args: chromium.args,
+      executablePath: await chromium.executablePath,
+      headless: chromium.headless,
     });
 
     const page = await browser.newPage();
@@ -13,10 +15,10 @@ const puppeteer = require("puppeteer");
       timeout: 60000,
     });
 
-    console.log("✅ Streamlit app pinged successfully!");
+    console.log("✅ Successfully pinged your Streamlit site!");
     await browser.close();
   } catch (error) {
-    console.error("❌ Error pinging Streamlit app:", error);
-    process.exit(1); // Fail the GitHub Action properly
+    console.error("❌ Ping failed:", error);
+    process.exit(1);
   }
 })();
