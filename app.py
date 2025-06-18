@@ -36,11 +36,6 @@ with col2:
     st_lottie(animation, height=180)
 with col3:
     st.markdown("""
-        **🎓 Deven Shah**  
-        Master's Student in Data Science @ University at Buffalo  
-        📫 deven.rshaha@gmail.com  
-        🌐 [LinkedIn](https://linkedin.com/in/deven-shaha) | [GitHub](https://github.com/ShahaDeven)
-
         I'm a data science enthusiast passionate about machine learning, analytics, and storytelling through data.  
         I enjoy combining technical solutions with creativity, and I've worked on projects in computer vision, NLP, and data visualization.
         """)
